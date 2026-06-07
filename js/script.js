@@ -51,5 +51,3 @@ function handleReservation(event) {
     // Reset form
     form.reset();
 }
-
-
