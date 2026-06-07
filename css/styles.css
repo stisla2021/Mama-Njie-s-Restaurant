@@ -12,7 +12,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.8;
     color: #f0f0f0;
     background-color: #1a3a52;
     background-image: 
@@ -59,8 +60,9 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
 .nav-menu {
@@ -87,6 +89,8 @@ body {
     padding: 0.5rem 1rem;
     border-bottom: 3px solid transparent;
     transition: all 0.3s ease;
+    font-size: 1.05rem;
+    font-weight: 500;
 }
 
 .nav-menu a:hover {
@@ -115,26 +119,31 @@ body {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0;
     color: #ffa500;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #d0d0d0;
     margin: 0.5rem 0 0 0;
+    font-weight: 500;
 }
 
 /* Buttons */
 .btn {
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 2rem;
     border: none;
     background: var(--accent-color);
     color: white;
     cursor: pointer;
-    font-size: 1rem;
-    border-radius: 3px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
@@ -156,11 +165,12 @@ body {
 
 .about h2 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 2.5rem;
     color: #ffa500;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
 .about p {
@@ -168,8 +178,8 @@ body {
     margin: 0 auto 1.8rem;
     text-align: center;
     color: #d0d0d0;
-    line-height: 1.8;
-    font-size: 1rem;
+    line-height: 1.9;
+    font-size: 1.1rem;
 }
 
 /* About Section - Enhanced */
@@ -188,17 +198,18 @@ body {
 
 .about-section h2 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #ffa500;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
 .about-section p {
     color: #d0d0d0;
-    line-height: 1.8;
-    font-size: 1rem;
+    line-height: 1.9;
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
     text-align: justify;
 }
@@ -213,13 +224,15 @@ body {
 
 .mama-njie-info h3 {
     color: #ffa500;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .mama-njie-info p {
     color: #d0d0d0;
-    line-height: 1.8;
+    line-height: 1.9;
+    font-size: 1.05rem;
 }
 
 /* Mama Njie Image */
@@ -246,9 +259,11 @@ body {
 
 .menu h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #ffa500;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .menu-grid {
@@ -260,10 +275,11 @@ body {
 }
 
 .menu-column h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid var(--accent-color);
     padding-bottom: 0.5rem;
+    font-weight: bold;
 }
 
 .menu-item {
@@ -286,14 +302,16 @@ body {
 }
 
 .menu-item p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #d0d0d0;
     margin: 0;
+    line-height: 1.6;
 }
 
 .price {
     color: var(--accent-color);
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 /* Reservations Section */
@@ -305,9 +323,11 @@ body {
 
 .reservations h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #ffa500;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .reservation-form {
@@ -319,16 +339,26 @@ body {
 
 .reservation-form input,
 .reservation-form select {
-    padding: 0.5rem;
-    border: 1px solid #ffa500;
-    font-size: 1rem;
+    padding: 0.75rem;
+    border: 2px solid #ffa500;
+    font-size: 1.05rem;
     background: #1a3a52;
     color: #f0f0f0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus {
+    outline: none;
+    border-color: #ff8c00;
+    box-shadow: 0 0 8px rgba(255, 165, 0, 0.4);
 }
 
 .reservation-form button {
-    margin-top: 0.5rem;
-}
+        padding: 0.75rem;
+        font-size: 1rem;
+        width: 100%;
 
 /* Contact Section */
 .contact {
@@ -339,9 +369,11 @@ body {
 
 .contact h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #ffa500;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .contact-info {
@@ -358,10 +390,15 @@ body {
 
 .contact-info h3 {
     margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffa500;
 }
 
 .contact-info p {
     color: #d0d0d0;
+    font-size: 1.05rem;
+    line-height: 1.8;
 }
 
 .contact-info a {
@@ -389,6 +426,7 @@ body {
 
 .footer p {
     margin: 0;
+    font-size: 1rem;
 }
 
 /* Hero Buttons Container */
@@ -410,6 +448,8 @@ body {
     text-align: center;
     color: #d0d0d0;
     margin-bottom: 3rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 /* Reservation Subtitle */
@@ -418,8 +458,8 @@ body {
     color: #ffa500;
     margin-bottom: 3rem;
     font-weight: bold;
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
 }
 
 /* Stop mobile shaking and layout shift */
@@ -477,7 +517,11 @@ a, button, input, select {
     }
 
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.15rem;
     }
 
     .menu-grid {
@@ -497,8 +541,18 @@ a, button, input, select {
     }
 
     .reservations h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-bottom: 1rem;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .menu h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
     }
 
     .reservation-subtitle {
@@ -532,15 +586,19 @@ a, button, input, select {
 
     .nav-menu {
         gap: 0.5rem;
-        font-size: 0.9rem;
-    }
-
-    .logo {
         font-size: 1rem;
     }
 
+    .logo {
+        font-size: 1.2rem;
+    }
+
     .hero h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
     }
 
     .nav-menu .back-to-top-btn {
@@ -560,17 +618,17 @@ a, button, input, select {
     .reservation-form input,
     .reservation-form select,
     .reservation-form button {
-        padding: 0.7rem;
-        font-size: 0.95rem;
+        padding: 0.8rem;
+        font-size: 1rem;
         width: 100%;
     }
 
     .reservations h2 {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 
     .reservation-subtitle {
-        font-size: 0.95rem;
+        font-size: 1.1rem;
     }
 }
 
