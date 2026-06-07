@@ -55,6 +55,10 @@ Edit `index.html` to update:
 - Contact information (phone, email, address)
 - Hours of operation
 
+**Current Hours:**
+- **Monday - Saturday**: 7:00 AM - 11:00 PM
+- **Sunday**: Closed
+
 ### Images
 Add your restaurant images to the `images/` folder and update image paths in `index.html`
 
