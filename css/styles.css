@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0f2438;
+    --accent-color: #ffa500;
+    --light-bg: #243a52;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #f0f0f0;
+    background-color: #1a3a52;
+    background-image: 
+        linear-gradient(rgba(26, 58, 82, 0.2), rgba(26, 58, 82, 0.2)),
+        url('../images/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    align-items: center;
+}
+
+.nav-menu li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li:last-child {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:not(.back-to-top-btn):hover {
+    color: #ffa500;
+    border-bottom: 3px solid #ffa500;
+}
+
+.nav-menu a.active {
+    color: #ffa500;
+    border-bottom: 3px solid #ffa500;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: #243a52;
+    padding: 4rem 0;
+    text-align: center;
+    border-bottom: 1px solid #1a3a52;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #ffa500;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #d0d0d0;
+    margin: 0.5rem 0 0 0;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    background: #ff8c00;
+}
+
+/* About Section */
+.about {
+    padding: 5rem 0;
+    background: #1a3a52;
+    border-top: 3px solid #ffa500;
+    border-bottom: 3px solid #ffa500;
+}
+
+.about .container {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    color: #ffa500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about p {
+    max-width: 900px;
+    margin: 0 auto 1.8rem;
+    text-align: center;
+    color: #d0d0d0;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #d0d0d0;
+}
+
+/* About Section - Enhanced */
+.about-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #0d1f2d 0%, #1a3a52 50%, #0f2d3d 100%);
+    border-top: 3px solid #ffa500;
+    border-bottom: 3px solid #ffa500;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #ffa500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-section p {
+    color: #d0d0d0;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.mama-njie-info {
+    background: rgba(255, 165, 0, 0.1);
+    padding: 2rem;
+    border-left: 4px solid #ffa500;
+    margin-top: 2rem;
+    border-radius: 3px;
+}
+
+.mama-njie-info h3 {
+    color: #ffa500;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mama-njie-info p {
+    color: #d0d0d0;
+    line-height: 1.8;
+}
+
+/* Mama Njie Image */
+.mama-njie-image {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.mama-njie-image img {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 3px solid #ffa500;
+}
+
+/* Menu Section */
+.menu {
+    padding: 3rem 0;
+    background: #243a52;
+    border-bottom: 1px solid #1a3a52;
+}
+
+.menu h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffa500;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.menu-item {
+    margin-bottom: 1.5rem;
+}
+
+.menu-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    color: #d0d0d0;
+    margin: 0;
+}
+
+.price {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Reservations Section */
+.reservations {
+    padding: 3rem 0;
+    background: #243a52;
+    border-bottom: 1px solid #1a3a52;
+}
+
+.reservations h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffa500;
+}
+
+.reservation-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.reservation-form input,
+.reservation-form select {
+    padding: 0.5rem;
+    border: 1px solid #ffa500;
+    font-size: 1rem;
+    background: #1a3a52;
+    color: #f0f0f0;
+}
+
+.reservation-form button {
+    margin-top: 0.5rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 3rem 0;
+    background: #243a52;
+    border-bottom: 1px solid #1a3a52;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffa500;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info > div {
+    text-align: center;
+}
+
+.contact-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+    color: #d0d0d0;
+}
+
+.contact-info a {
+    color: #ffa500;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-info p.contact-highlight {
+    color: #ffa500;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Hero Buttons Container */
+.hero-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Menu Subtitle */
+.menu-subtitle {
+    text-align: center;
+    color: #d0d0d0;
+    margin-bottom: 3rem;
+}
+
+/* Reservation Subtitle */
+.reservation-subtitle {
+    text-align: center;
+    color: #ffa500;
+    margin-bottom: 3rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+/* Back to Top Button */
+.nav-menu .back-to-top-btn {
+    color: white !important;
+    font-size: 1.3rem !important;
+    border: 2px solid #ffa500 !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 35px !important;
+    height: 35px !important;
+    padding: 0 !important;
+    transition: all 0.3s ease;
+    background: transparent !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+}
+
+.nav-menu .back-to-top-btn:hover {
+    background-color: #ffa500 !important;
+    color: #0f2438 !important;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-form {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .reservations {
+        padding: 2rem 0;
+    }
+
+    .reservations h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .reservation-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .reservation-form input,
+    .reservation-form select {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-menu .back-to-top-btn {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 1.2rem !important;
+    }
+
+    .reservation-form {
+        max-width: 100%;
+        padding: 0 15px;
+        gap: 0.8rem;
+    }
+
+    .reservation-form input,
+    .reservation-form select {
+        padding: 0.7rem;
+        font-size: 0.95rem;
+    }
+
+    .reservations h2 {
+        font-size: 1.4rem;
+    }
+
+    .reservation-subtitle {
+        font-size: 0.95rem;
+    }
+}

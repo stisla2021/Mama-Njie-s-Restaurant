@@ -1,0 +1,471 @@
+# Mama Njie's Restaurant - Project Documentation
+
+## Project Overview
+
+Building Mama Njie's Restaurant website was more than just creating a typical business site. It's about bringing authentic Gambian cuisine to the world and telling the story of Mama Njie's incredible 13-year journey in the kitchen. 
+
+The site needed to feel warm and welcoming - just like stepping into the restaurant itself. I wanted visitors to see not just a menu, but a piece of The Gambia's rich culinary heritage. From the moment you land on the homepage, you should feel the passion behind every dish and the genuine love that goes into every meal.
+
+**What Makes This Restaurant Special:**
+- Real, authentic Gambian food made with generations of tradition
+- 13 years of Mama Njie perfecting her craft
+- Not just food - it's a cultural experience
+- A place where you're treated like family, not just a customer
+
+---
+
+## Project Structure
+
+Here's how everything is organized. It's simple and makes sense:
+
+```
+JCC-Restaurant/
+│
+├── index.html                 # The homepage - where everyone lands
+├── about.html                 # More about the restaurant
+├── menu.html                  # All the food options
+├── contact.html               # How to reach them
+├── reservations.html          # Online booking
+│
+├── css/
+│   └── styles.css             # All the styling in one place
+│
+├── js/
+│   └── script.js              # Any interactive features
+│
+├── images/                    # Photos of the food and owner
+│   ├── mama-njie.jpg          # Mama Njie herself
+│   ├── domoda.jpg             # National treasure - peanut stew
+│   ├── benachin.jpg           # One-pot wonder
+│   ├── yassa.jpg              # Lemony goodness
+│   ├── jollof-rice.jpg        # Spiced rice done right
+│   ├── supakanja.jpg          # Okra perfection
+│   ├── mbahal.jpg             # Smoked fish magic
+│   ├── caldo.jpg              # Whole fish happiness
+│   ├── chew-diw-tirr.jpg      # Catfish dreams
+│   ├── oyster-stew.jpg        # Ocean's gift
+│   ├── peppersoup.jpg         # Heat and flavor
+│   ├── plasas.jpg             # Greens and soul
+│   ├── okra-soup.jpg          # Okra love
+│   ├── tapalapa.jpg           # Bread - the real deal
+│   ├── attaya.jpg             # Traditional tea
+│   ├── fishballs.jpg          # Fried perfection
+│   ├── akara.jpg              # Pea fritters magic
+│   ├── moi-moi.jpg            # Bean pastry comfort
+│   ├── background.jpg         # The backdrop
+│   └── [supporting images]
+│
+└── PROJECT_DOCUMENTATION.md   # This file
+```
+
+---
+
+## Features Implemented
+
+### 1. **Navigation That Makes Sense**
+The navigation bar is simple and clean - nothing fancy, just functional. Dark blue background with orange accents to match the warmth of the food. Whether you're on a phone or a desktop, you can easily find what you're looking for.
+
+**Active Page Indicator:** When you're on a page, that link in the navigation becomes highlighted with:
+- Orange text color (#ffa500)
+- Orange underline below the link
+- Bold font weight
+
+This way, visitors always know which page they're on. If you're reading the menu, the "Menu" link is highlighted. If you go to Contact, "Contact" gets highlighted. It's a small touch that makes navigation feel professional and intuitive.
+
+### 2. **Homepage That Tells a Story**
+The homepage isn't just pretty - it's welcoming. The hero section catches your attention, but what really matters is the About section with Mama Njie's actual photo. When people see her face and read her story, they understand that this isn't a chain restaurant. It's her passion, her recipes, her love for cooking.
+
+### 3. **Menu That Makes Your Mouth Water**
+18 traditional Gambian dishes organized in a way that makes sense. Main dishes, seafood, soups, and street food. Each dish has a photo, a name, a real description (not just "tasty stew"), and an honest price. When you scroll through, you're not just reading - you're almost tasting it.
+
+### 4. **About Page With Heart**
+This is where people learn what Mama Njie is really about. The restaurant's mission, her background, and why she does what she does.
+
+### 5. **Contact Information**
+Simple and direct. Where the restaurant is, how to reach them, when they're open.
+
+### 6. **Reservation System That Actually Works**
+An online booking form that doesn't overcomplicate things. You need to book a table? Name, email, phone, when you want to come, how many people. That's it.
+
+### 7. **Design That Feels Right**
+The whole site uses a warm color scheme - dark blue that feels sophisticated but approachable, orange accents that feel alive and energetic. It matches the food. It matches the feeling of walking into a family restaurant.
+
+---
+
+## Development Work Completed
+
+### Phase 1: Content Enhancement
+When I was building the site, I realized it wasn't enough to just list dishes - people needed to understand the story. So I added Mama Njie's personal journey and why these 13 years matter. Every traditional dish tells a story about The Gambia, and I wanted that to come through.
+
+✓ Wrote engaging descriptions that capture the essence of Gambian cuisine
+✓ Highlighted Mama Njie's 13 years of experience as a central point of pride
+✓ Made sure to explain what makes dishes like Domoda and Benachin special
+✓ Emphasized that this is about family and culture, not just food
+
+### Phase 2: Visual Improvements  
+The design had to match the warmth of the restaurant. I didn't want it to feel cold or corporate.
+
+✓ Made the background images more visible (less overlay) so the culture shows through
+✓ Added a beautiful gradient to the About section that feels welcoming
+✓ Styled Mama Njie's photo with care - she deserves to be the centerpiece
+✓ Ensured every device - phone, tablet, desktop - feels great to use
+
+### Phase 3: Image Management
+This was honestly one of the trickiest parts. The images had messy names with spaces, weird capitalization, and even double extensions. I had to track down and fix every single one. It took time but it was worth it to keep everything clean and consistent.
+
+✓ Renamed 14 images to follow a proper system (no spaces, no weird capitalization)
+✓ Fixed references across the entire menu page so all dishes display correctly
+✓ Removed broken double extensions like `.jpg.jpg`
+✓ Created a naming standard so future images will be easy to manage
+
+**Images That Needed Fixing:**
+- Files with spaces: `Oyster Stew.jpg` → `oyster-stew.jpg`
+- Weird capitalization: `Moi Moi.jpg` → `moi-moi.jpg`
+- Double extensions: `Okra Soup.jpg.jpg` → `okra-soup.jpg`
+- URL encoding issues: `fish%20balls.jpg` → `fishballs.jpg`
+- And 10+ more...
+
+### Phase 4: Code Quality Improvements
+The code had a lot of inline styles scattered everywhere - 60+ separate instances! It was messy and hard to maintain. I cleaned it all up and moved everything to proper CSS classes.
+
+✓ Removed all 60+ inline styles from HTML
+✓ Created new CSS classes that are reusable and clean
+✓ Made the code easier to update and maintain
+✓ Fixed validation errors that would have caused problems down the line
+
+---
+
+## Technical Details - The Behind-The-Scenes Stuff
+
+### Why These Choices Matter
+
+**HTML Structure:** I built this with semantic HTML - that means search engines understand what's happening. It's also more accessible, so if someone's using a screen reader, they can actually navigate the site properly.
+
+**CSS Organization:** All the styling lives in one external file. This might seem like a small thing, but it makes a huge difference. If we need to change how things look, we do it in one place, not scattered across 60+ inline styles.
+
+**Responsive Design:** The site works beautifully on phones, tablets, and desktops. I tested this myself - you don't want a menu designed for desktop to look weird on your phone.
+
+**Image Handling:** Every image has a fallback color and alt text. If an image doesn't load (internet issues, missing file, whatever), the page doesn't break. It gracefully handles it.
+
+**Error Prevention:** The reservation form validates properly. You can't submit incomplete information. The site tells you what's wrong before you try to submit.
+
+### The Color Psychology
+
+- **Dark Blue (#0f2438):** Feels professional, trustworthy, sophisticated
+- **Orange (#ffa500):** Warm, energetic, appetizing - it makes you think of food
+- **Light text:** Easy to read against dark backgrounds
+
+It's not arbitrary. The colors work together to create a specific feeling.
+
+---
+
+## Menu Items Details
+
+### Main Dishes
+| Dish | Price | Description |
+|------|-------|-------------|
+| Domoda | 85 GMD | National dish - peanut stew with meat & vegetables |
+| Benachin | 95 GMD | One-pot rice with fish & fresh vegetables |
+| Yassa | 80 GMD | Lemon chicken or fish with onions & mustard |
+| Jollof Rice | 80 GMD | Spiced West African rice with meat |
+| Supakanja | 75 GMD | Okra stew with palm oil & smoked fish |
+
+### Fish & Seafood
+| Dish | Price | Description |
+|------|-------|-------------|
+| Mbahal | 90 GMD | Smoked fish with groundnuts & black-eyed beans |
+| Caldo | 88 GMD | Lemon-flavored steamed whole fish |
+| Chew Diw Tirr | 92 GMD | Smoked catfish with okra & vegetables |
+| Oyster Stew | 85 GMD | Fresh oysters with peppers & herbs |
+| Peppersoup | 65 GMD | Spicy fish stew with traditional seasonings |
+
+### Soups & Sides
+| Dish | Price | Description |
+|------|-------|-------------|
+| Plasas | 70 GMD | Spinach or potato leaves stew with rice |
+| Okra Soup | 60 GMD | Traditional okra stew with fresh herbs |
+| Tapalapa Bread | 15 GMD | Local baguette bread |
+| Attaya Tea | 12 GMD | Traditional sweet green tea |
+
+### Street Food & Appetizers
+| Dish | Price | Description |
+|------|-------|-------------|
+| Fish Balls | 35 GMD | Ground fish with spices & rice |
+| Akara | 25 GMD | Deep-fried black-eyed pea fritters |
+| Moi Moi | 45 GMD | Boiled bean pastry with meat & vegetables |
+
+---
+
+## Color Scheme - The Visual Identity
+
+Here's what I chose and why it matters:
+
+```
+Dark Blue #0f2438        - The foundation. Professional but warm.
+Orange #ffa500           - The accent. Energetic and appetizing.
+Medium Blue #243a52      - Supporting color for variety without chaos.
+Dark Blue #1a3a52        - For darker sections to create depth.
+Off-White #f0f0f0        - Main text color. Easy on the eyes.
+Light Gray #d0d0d0       - Secondary text. Still readable, softer than pure white.
+```
+
+I didn't pick these randomly. The blue feels sophisticated and trustworthy. The orange makes you think of food and warmth. Together, they create a feeling of a place that's both professional and genuinely welcoming.
+
+---
+
+## How It Looks on Different Devices
+
+**On Your Phone (anything under 768px):**
+Everything stacks nicely. The menu items are in a single column so you can scroll comfortably. Images are sized appropriately. Buttons are big enough to tap without frustration.
+
+**On a Tablet (768px to 1024px):**
+Things are spread out a bit more. The menu shows in 2 columns so you can see more at once. Still readable, still comfortable.
+
+**On a Desktop (1024px and up):**
+This is where the full design comes alive. You see 4 columns of menu items, the navigation is clean and horizontal. Everything has breathing room. This is the premium experience.
+
+---
+
+## Browser Compatibility
+
+The site works great on basically everything:
+- Chrome (your grandma's definitely using this)
+- Firefox (for the tech-savvy folks)
+- Safari (if you're on an iPhone or Mac)
+- Edge (Windows users)
+- Mobile browsers (Android and iOS)
+
+I tested it myself - the site looks good and works smoothly everywhere.
+
+---
+
+## How The Website Was Built - Step By Step
+
+I want to walk you through exactly how I built this website, from start to finish. This is the process I followed:
+
+### Step 1: Planning & Understanding The Requirements
+**What I Did:**
+- First, I thought about what a restaurant website needs
+- A place to show the menu
+- A way for people to make reservations
+- Information about who Mama Njie is and why she's special
+- A professional, welcoming design
+
+**Why It Matters:**
+Before writing a single line of code, I made sure I understood what the website needed to do. This saved me time later because I didn't have to rebuild things.
+
+### Step 2: Creating The Basic HTML Files
+**What I Did:**
+- Created 5 main HTML pages:
+  - `index.html` (the homepage)
+  - `about.html` (restaurant info)
+  - `menu.html` (all the food)
+  - `contact.html` (how to reach them)
+  - `reservations.html` (booking system)
+- Added a navigation bar to each page so people can move around
+- Used semantic HTML (proper tags like `<nav>`, `<section>`, `<footer>`)
+
+**Why It Matters:**
+Semantic HTML makes the site easier to understand for search engines and for people using screen readers. It's not just about making it work - it's about making it work well for everyone.
+
+### Step 3: Adding The Content
+**What I Did:**
+- Wrote descriptions that tell the story of Mama Njie and her cooking
+- Listed all 18 dishes with prices and descriptions
+- Added information about the restaurant's values and mission
+- Created the reservation form with all necessary fields
+
+**Why It Matters:**
+Content is king. A beautiful design means nothing if there's nothing good to say. I made sure every word had purpose and helped tell Mama Njie's story.
+
+### Step 4: Creating The CSS Design
+**What I Did:**
+- Chose a color scheme that felt warm and professional (dark blue + orange)
+- Created styles for the navigation bar
+- Designed the hero section (the big banner at the top)
+- Styled the menu grid so dishes display nicely
+- Made everything responsive (works on phones, tablets, desktops)
+- Organized all the CSS in one external file
+
+**Why It Matters:**
+Good design isn't just about looking pretty. It's about guiding people's eyes, making information easy to find, and creating an emotional connection. The colors I chose aren't random - they make people think of food and trust.
+
+### Step 5: Adding Images
+**What I Did:**
+- Organized all the food images into the `images/` folder
+- Added Mama Njie's photo to make the site more personal
+- Created a background image for depth
+- Added alt text to every image for accessibility
+
+**Why It Matters:**
+Images make the difference between a boring text website and something that makes you hungry. They also help with search engine rankings.
+
+### Step 6: The Big Cleanup - Fixing The Images
+**What I Did:**
+- Found that image names were a mess (spaces, weird capitalization, double extensions)
+- Renamed all 14 images to follow a consistent system: `dish-name.jpg`
+- Updated all the references in the HTML files
+- Examples of what I fixed:
+  - `Oyster Stew.jpg` → `oyster-stew.jpg`
+  - `Okra Soup.jpg.jpg` → `okra-soup.jpg` (removed the double extension!)
+  - `fish%20balls.jpg` → `fishballs.jpg`
+
+**Why It Matters:**
+Consistency in file naming saves huge amounts of time later. If I need to add a new dish, I already know the naming pattern. Plus, it prevents broken links and makes the site more professional.
+
+### Step 7: Removing The Bad Code
+**What I Did:**
+- Found 60+ inline CSS styles scattered throughout the HTML
+- Moved all of them to the CSS file
+- Created new CSS classes for each type of styling
+- Removed all validation errors
+
+**Why It Matters:**
+Inline styles are like having the same information in 10 places. If you need to change something, you have to change it in all 10 places. By moving everything to one CSS file, I made the code way easier to maintain.
+
+### Step 8: Making It Mobile-Friendly
+**What I Did:**
+- Tested the site on different screen sizes
+- Made sure text is readable on phones
+- Made sure buttons are big enough to tap
+- Adjusted spacing so everything looks good everywhere
+
+**Why It Matters:**
+Most people access websites on their phones now. If it doesn't look good on mobile, they won't stick around. I made sure the experience is great on every device.
+
+### Step 9: Adding Mama Njie's Photo
+**What I Did:**
+- Took her photo and optimized it for the web
+- Added it to the homepage in the About section
+- Styled it with a border and shadow to make it stand out
+- Added proper alt text
+
+**Why It Matters:**
+This is huge. When people see Mama Njie's face, the site becomes real. They're not just looking at a menu - they're connecting with a person. This personal touch is what makes the difference between a forgettable website and one that sticks in people's minds.
+
+### Step 10: Testing Everything
+**What I Did:**
+- Opened the site in different browsers (Chrome, Firefox, Safari, Edge)
+- Tested on phone, tablet, and desktop
+- Made sure all links work
+- Tested the reservation form
+- Checked that all images display
+
+**Why It Matters:**
+Users experience the website in different ways. What looks good on my computer might look weird on someone else's phone. Testing catches problems before real people see them.
+
+### Step 11: Creating Documentation
+**What I Did:**
+- Wrote this entire document explaining everything
+- Made sure someone reading it could understand what was done and why
+- Included examples and details
+
+**Why It Matters:**
+Documentation is like leaving instructions for the future. Whether it's for your lecturers, for the next person who works on the site, or for yourself in a year, this document explains the "why" behind the decisions. That's way more valuable than just "what I did."
+
+---
+
+## The Technical Tools I Used
+
+**HTML:** The structure and content
+**CSS:** The styling and layout
+**JavaScript:** Any interactive features (minimal in this case - the site is mostly HTML and CSS)
+**File Management:** Organizing images and naming them properly
+**Browser DevTools:** Testing and debugging
+
+You don't need fancy tools to build a good website. The basics done well are better than fancy tools used badly.
+
+---
+
+## The Thinking Behind Key Decisions
+
+### Why Dark Blue + Orange?
+- Dark blue feels trustworthy and professional
+- Orange makes you think of warmth and food
+- Together, they create a feeling of a place that's fancy but still family-friendly
+- It's the opposite of looking like a chain restaurant
+
+### Why So Many Images?
+- People eat with their eyes first
+- A menu without pictures feels boring
+- Photos help people decide what to order
+- Images break up text and make the page easier to scan
+
+### Why Keep It Simple?
+- Complex websites confuse people
+- People want to find information quickly
+- Mama Njie's is about the food and the story, not fancy web tricks
+- Simple is professional
+
+### Why Focus on Mama Njie's Story?
+- Anyone can list food items
+- What makes this special is *who* makes the food
+- Her 13 years of experience is her biggest asset
+- People connect with people, not companies
+
+---
+
+## What I Learned From This Project
+
+1. **Organization matters** - Clean file names and structure saves so much time
+2. **Consistency is key** - If you make rules and follow them, everything stays manageable
+3. **People matter more than features** - The photo of Mama Njie is more powerful than any fancy animation
+4. **Mobile first** - More people will see this on phones than desktops
+5. **Test everything** - Something working on my computer doesn't mean it works everywhere
+6. **Document as you go** - Trying to remember everything later is painful
+
+---
+
+Here's what I touched and why:
+
+1. **index.html** - Added the About section with Mama Njie's story and photo
+2. **menu.html** - Fixed all the broken image links and cleaned up the formatting
+3. **reservations.html** - Cleaned up inline styles and made the code more professional
+4. **css/styles.css** - Added new styles, reorganized everything, removed the mess of inline styling
+5. **images/** - Renamed 14 image files to follow a consistent naming system
+6. **PROJECT_DOCUMENTATION.md** - This file, explaining everything that was done
+
+---
+
+## What's Next - Ideas for the Future
+
+As the site grows and Mama Njie's gets more customers, here are some things we could add:
+
+1. **Online Payment Integration** - Let people pay for reservations upfront or pre-order food
+2. **Email Confirmations** - When someone books, they get an automatic confirmation email
+3. **Customer Reviews** - Let satisfied customers share their experience
+4. **Recipe Blog** - Mama Njie could share some of her recipes and cooking tips
+5. **Social Media Connection** - Automatically post photos of daily specials to Instagram/Facebook
+6. **Multiple Languages** - Reach people who speak French, Arabic, or other languages
+7. **Photo Gallery** - More images showing the restaurant, the kitchen, the atmosphere
+8. **Customer Testimonials Carousel** - A rotating display of what people love about the restaurant
+9. **Admin Dashboard** - An easy way for Mama Njie to manage reservations without technical help
+10. **Live Chat** - Real-time support for people with questions
+
+These aren't essential right now, but they're possibilities as the business grows.
+
+---
+
+## Conclusion
+
+This wasn't just about building a website. It was about creating a digital front door to Mama Njie's Restaurant. Every decision - from the colors to the photos to the way the menu is organized - was made with one goal in mind: help people understand and appreciate authentic Gambian cuisine and the woman who's been perfecting it for 13 years.
+
+**What We Accomplished:**
+- ✓ Created a beautiful, welcoming online space
+- ✓ Showcased 18 authentic Gambian dishes with photos and real descriptions
+- ✓ Made it easy for people to make reservations online
+- ✓ Built clean, maintainable code that's easy to update
+- ✓ Ensured the site works perfectly on any device
+- ✓ Made the site accessible to everyone
+- ✓ Captured the warmth and culture of The Gambia
+
+But more than that, we created a platform where Mama Njie can share her passion with the world. Every time someone visits this site, they're not just looking at a restaurant - they're peeking into 13 years of dedication, love, and delicious food.
+
+The website isn't flashy or over-engineered. It's honest, welcoming, and it does what it's supposed to do: make people hungry and excited to visit.
+
+---
+
+**Project Date:** June 6, 2026  
+**Restaurant:** Mama Njie's - Experience Authentic Gambian Flavors  
+**The Heart Behind It:** 13 Years of Culinary Excellence and Passion  
+**Our Mission:** Bringing The Gambian table to yours

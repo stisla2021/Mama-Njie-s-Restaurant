@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations - Mama Njie's Restaurant</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Mama Njie's</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reservations.html" class="active">Reserve</a></li>
+                <li><a href="#" id="backToTop" class="back-to-top-btn">↑</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Reservation Section -->
+    <section id="reservations" class="reservations">
+        <div class="container">
+            <h2>Make a Reservation</h2>
+            <p class="reservation-subtitle">Book your table at Mama Njie's</p>
+            <form class="reservation-form" onsubmit="handleReservation(event)">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone" required>
+                <input type="date" title="Reservation Date" required>
+                <select title="Reservation Time" required>
+                    <option value="">Time</option>
+                    <option value="6:00pm">6:00 PM</option>
+                    <option value="6:30pm">6:30 PM</option>
+                    <option value="7:00pm">7:00 PM</option>
+                    <option value="7:30pm">7:30 PM</option>
+                    <option value="8:00pm">8:00 PM</option>
+                </select>
+                <button type="submit" class="btn">Reserve</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 St_ISLA2021</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
