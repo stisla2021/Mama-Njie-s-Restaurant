@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" id="top">
         <div class="nav-container">
             <div class="logo">Mama Njie's</div>
             <ul class="nav-menu">
@@ -17,7 +17,6 @@
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="reservations.html">Reserve</a></li>
-                <li><a href="#" id="backToTop" class="back-to-top-btn">↑</a></li>
             </ul>
         </div>
     </nav>
@@ -25,8 +24,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Mama Njie's Restaurant</h1>
-            <p>Experience the Authentic Flavors of The Gambia</p>
+            <h1><strong>Mama Njie's Restaurant</strong></h1>
+            <p><i>Experience the Authentic Flavors of The Gambia</i></p>
             <div class="hero-buttons">
                 <a href="menu.html" class="btn btn-link">View Our Menu</a>
                 <a href="reservations.html" class="btn btn-link">Book a Table</a>
@@ -37,13 +36,13 @@
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="about-container">
-            <h2>Our Story</h2>
-            <p>From my grandmother's kitchen to your table, every dish is prepared with love, tradition, and the freshest ingredients. We bring you the rich, bold, and vibrant tastes of West African cuisine — from creamy Domoda and fragrant Benachin to zesty Chicken Yassa.</p>
-            <p>At Mama Njie's, you're not just a customer — you're family. Come taste the warmth, culture, and soul of The Gambia in every bite.</p>
+            <h2><strong>Our Story</strong></h2>
+            <p><i>From my grandmother's kitchen to your table, every dish is prepared with love, tradition, and the freshest ingredients.</i> We bring you the rich, bold, and vibrant tastes of West African cuisine — from creamy Domoda and fragrant Benachin to zesty Chicken Yassa.</p>
+            <p>At <strong>Mama Njie's</strong>, you're not just a customer — you're <i>family</i>. Come taste the warmth, culture, and soul of The Gambia in every bite.</p>
             
             <div class="mama-njie-info">
-                <h3>Meet Mama Njie</h3>
-                <p>With <strong>13 years of dedicated experience</strong> in the kitchen, Mama Njie has perfected the art of traditional Gambian cooking. Her passion for authentic flavors and commitment to quality has made Mama Njie's Restaurant a beloved destination for those seeking genuine West African cuisine.</p>
+                <h3><strong>Meet Mama Njie</strong></h3>
+                <p>With <strong>13 years of dedicated experience</strong> in the kitchen, <strong>Mama Njie</strong> has perfected the art of <i>traditional Gambian cooking</i>. Her passion for authentic flavors and commitment to quality has made Mama Njie's Restaurant a beloved destination for those seeking genuine West African cuisine.</p>
             </div>
 
             <div class="mama-njie-image">
@@ -57,6 +56,17 @@
         <p>&copy; 2026 St_ISLA2021</p>
     </footer>
 
-    <script src="js/script.js"></script>
+<script>
+  // Back to Top button - show after scrolling 300px
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      document.body.classList.add('scrolled');
+    } else {
+      document.body.classList.remove('scrolled');
+    }
+  });
+</script>
+
+<script src="js/script.js"></script>
 </body>
 </html>

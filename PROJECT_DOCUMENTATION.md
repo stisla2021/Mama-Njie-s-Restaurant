@@ -133,6 +133,41 @@ The code had a lot of inline styles scattered everywhere - 60+ separate instance
 ✓ Made the code easier to update and maintain
 ✓ Fixed validation errors that would have caused problems down the line
 
+### Phase 5: Design Polish & Typography Updates
+I wanted the text to look cooler and more visually interesting throughout the site. So I went through and added strategic bold and italic styling to make key phrases pop.
+
+✓ Added **bold formatting** to important terms and restaurant name
+✓ Added *italic formatting* to descriptive phrases and taglines
+✓ Updated headings to use **strong** tags for emphasis
+✓ Made contact information look more polished with mixed formatting
+✓ Applied consistent styling across all pages (index, about, menu, contact, reservations)
+✓ The result feels more dynamic without being overwhelming
+
+### Phase 6: Back to Top Navigation Enhancement
+I realized the menu page would benefit from a back-to-top button since users might scroll through a lot of dishes. So I added one with a cool arrow design that appears when you scroll down.
+
+✓ Created a fixed position button in the bottom-right corner
+✓ Used a circular orange gradient design that matches the site's aesthetic
+✓ Added smooth animations - the button lifts up on hover
+✓ Only appears after scrolling 300px down the page
+✓ Smooth scroll animation when clicked to return to top
+✓ Updated the JavaScript to handle show/hide logic
+✓ Added corresponding CSS with hover effects and box shadows
+✓ The ↑ arrow is bold and easy to spot
+
+**Technical Details:**
+- Button appears/disappears dynamically based on scroll position
+- Smooth scrolling behavior for better user experience
+- Gradient background (orange to darker orange) for visual appeal
+- Transform effects on hover and click for interactive feedback
+- Z-index set high so it's always accessible
+
+### Phase 7: Contact Information Maintenance
+Fixed a small but important issue - the WhatsApp link had an incomplete phone number. The display showed "+220 516 9685" but the actual link was missing the last digit. Updated the href to match the display number correctly.
+
+✓ Fixed WhatsApp link phone number accuracy
+✓ Ensured all contact methods are working properly
+
 ---
 
 ## Technical Details - The Behind-The-Scenes Stuff
@@ -418,12 +453,21 @@ You don't need fancy tools to build a good website. The basics done well are bet
 
 Here's what I touched and why:
 
-1. **index.html** - Added the About section with Mama Njie's story and photo
-2. **menu.html** - Fixed all the broken image links and cleaned up the formatting
-3. **reservations.html** - Cleaned up inline styles and made the code more professional
-4. **css/styles.css** - Added new styles, reorganized everything, removed the mess of inline styling
-5. **images/** - Renamed 14 image files to follow a consistent naming system
-6. **PROJECT_DOCUMENTATION.md** - This file, explaining everything that was done
+1. **index.html** - Added the About section with Mama Njie's story and photo. Also added bold and italic styling to key phrases to make the content more visually engaging. The text about family and traditions now really stands out.
+
+2. **about.html** - Enhanced all the content with mixed formatting. Important concepts like "family traditions" and "authentic Gambian hospitality" are now bold, while descriptive text is italicized for better visual hierarchy. Makes the page feel more polished and easier to scan.
+
+3. **menu.html** - Fixed all the broken image links and cleaned up the formatting. Updated section headers with bold styling. Plus, I added a cool back-to-top button that appears when you scroll down - it has a nice arrow design and smooth scroll animation. It's useful when browsing through all 18 dishes.
+
+4. **contact.html** - Completely redesigned the text formatting with bold headers and italic contact details. Fixed the WhatsApp link which had an incomplete phone number. Now all the information looks professional and organized. Each section (Location, Phone, Hours, etc.) stands out clearly.
+
+5. **reservations.html** - Applied the same formatting improvements, making the heading and subtitle more visually interesting with bold and italic styling.
+
+6. **css/styles.css** - Added new styles for the back-to-top button with gradient background, hover effects, and smooth animations. The button looks great and provides a polished feel. Also cleaned up and reorganized existing styles.
+
+7. **js/script.js** - Added the back-to-top button functionality. It detects when you've scrolled 300px down and shows the button, then smoothly scrolls you back to the top when clicked.
+
+8. **images/** - Renamed 14 image files to follow a consistent naming system
 
 ---
 
@@ -450,6 +494,8 @@ These aren't essential right now, but they're possibilities as the business grow
 
 This wasn't just about building a website. It was about creating a digital front door to Mama Njie's Restaurant. Every decision - from the colors to the photos to the way the menu is organized - was made with one goal in mind: help people understand and appreciate authentic Gambian cuisine and the woman who's been perfecting it for 13 years.
 
+Recently, I polished up the site even more. The text now has better formatting with strategic bold and italic styling that makes everything easier to read and more visually interesting. I also fixed that WhatsApp link issue and added a nice back-to-top button to the menu page so people can easily navigate through all the dishes without endless scrolling.
+
 **What We Accomplished:**
 - ✓ Created a beautiful, welcoming online space
 - ✓ Showcased 18 authentic Gambian dishes with photos and real descriptions
@@ -458,14 +504,15 @@ This wasn't just about building a website. It was about creating a digital front
 - ✓ Ensured the site works perfectly on any device
 - ✓ Made the site accessible to everyone
 - ✓ Captured the warmth and culture of The Gambia
+- ✓ Added polished typography with mixed formatting for better visual appeal
+- ✓ Implemented a functional back-to-top navigation button
+- ✓ Fixed contact information accuracy
 
-But more than that, we created a platform where Mama Njie can share her passion with the world. Every time someone visits this site, they're not just looking at a restaurant - they're peeking into 13 years of dedication, love, and delicious food.
-
-The website isn't flashy or over-engineered. It's honest, welcoming, and it does what it's supposed to do: make people hungry and excited to visit.
+The website isn't flashy or over-engineered. It's honest, welcoming, and it does what it's supposed to do: make people hungry and excited to visit. The recent improvements just made it feel more professional and refined without changing the core simplicity that makes it work.
 
 ---
 
-**Project Date:** June 6, 2026  
+**Project Date:** June 6, 2026 (Updated June 7, 2026)  
 **Restaurant:** Mama Njie's - Experience Authentic Gambian Flavors  
 **The Heart Behind It:** 13 Years of Culinary Excellence and Passion  
 **Our Mission:** Bringing The Gambian table to yours

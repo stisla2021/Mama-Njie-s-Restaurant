@@ -1,21 +1,26 @@
 // Smooth scroll for links
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
-        if (link.id !== 'backToTop') {
-            e.preventDefault();
-            const target = document.querySelector(link.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
         }
     });
 });
 
 // Back to Top Button
-const backToTopBtn = document.getElementById('backToTop');
+const backToTopBtn = document.getElementById('backToTopBtn');
 if (backToTopBtn) {
-    backToTopBtn.addEventListener('click', (e) => {
-        e.preventDefault();
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
