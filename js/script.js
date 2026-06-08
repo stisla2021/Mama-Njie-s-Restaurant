@@ -1,15 +1,18 @@
 // Smooth scroll for links
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
+        const targetId = link.getAttribute('href');
+        const target = document.querySelector(targetId);
+        
         if (target) {
+            e.preventDefault(); // Only prevent if target exists
             target.scrollIntoView({ behavior: 'smooth' });
         }
+        // If no target, let browser handle it normally so scroll doesn't break
     });
 });
 
-// Back to Top Button
+// Back to Top Button - only runs if button exists
 const backToTopBtn = document.getElementById('backToTopBtn');
 if (backToTopBtn) {
     window.addEventListener('scroll', () => {
