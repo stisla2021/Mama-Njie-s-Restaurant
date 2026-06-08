@@ -466,6 +466,14 @@ body {
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
 }
 
 /* Prevent layout shift from scrollbar */
@@ -474,7 +482,7 @@ html {
     box-sizing: border-box;
 }
 
-section, div, .hero, a, button {
+section, .hero, a, button {
     transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -492,18 +500,23 @@ a, button, input, select {
 /* Responsive Design */
 @media (max-width: 768px) {
     html {
-        overflow-x: hidden;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
         scroll-behavior: smooth;
+        height: auto !important;
     }
 
     body {
-        background-attachment: scroll;
-        overflow-x: hidden;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
         width: 100%;
+        background-attachment: scroll;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     .container {
@@ -578,6 +591,22 @@ a, button, input, select {
 }
 
 @media (max-width: 480px) {
+    html {
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        height: auto !important;
+    }
+
+    body {
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
     .container {
         max-width: 100% !important;
         width: 100% !important;
