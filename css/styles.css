@@ -25,9 +25,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    overflow-y: auto;
 }
 
 @media (max-width: 768px) {
@@ -469,13 +467,6 @@ html {
     overflow-y: auto;
 }
 
-body {
-    overflow-x: hidden;
-    overflow-y: auto;
-    height: auto;
-    min-height: 100vh;
-}
-
 /* Prevent layout shift from scrollbar */
 * {
     -webkit-touch-callout: none;
@@ -483,10 +474,8 @@ body {
 }
 
 section, .hero, a, button {
-    transform: translateZ(0);
-    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000;
+    backface-visibility: hidden;
 }
 
 /* Disable double-tap zoom on buttons and links */
@@ -500,23 +489,18 @@ a, button, input, select {
 /* Responsive Design */
 @media (max-width: 768px) {
     html {
-        overflow-x: hidden !important;
-        overflow-y: auto !important;
-        -webkit-overflow-scrolling: touch !important;
+        overflow-x: hidden;
+        overflow-y: auto;
         scroll-behavior: smooth;
-        height: auto !important;
     }
 
     body {
-        overflow-x: hidden !important;
-        overflow-y: auto !important;
+        overflow-x: hidden;
+        overflow-y: auto;
         width: 100%;
         background-attachment: scroll;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
     }
 
     .container {
@@ -583,28 +567,21 @@ a, button, input, select {
 
     section, div, .hero, .container {
         width: 100%;
-        transform: translateZ(0);
-        backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
-        -webkit-transform: translateZ(0);
+        backface-visibility: hidden;
     }
 }
 
 @media (max-width: 480px) {
     html {
-        overflow-x: hidden !important;
-        overflow-y: auto !important;
-        -webkit-overflow-scrolling: touch !important;
-        height: auto !important;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     body {
-        overflow-x: hidden !important;
-        overflow-y: auto !important;
+        overflow-x: hidden;
+        overflow-y: auto;
         width: 100%;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
     }
 
     .container {
@@ -694,4 +671,17 @@ a, button, input, select {
 
 .back-to-top-btn.show {
     display: flex;
+}
+
+.reservation-form button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* Contact Section */
+.contact {
+    padding: 3rem 0;
+    background: #243a52;
+    border-bottom: 1px solid #1a3a52;
 }
