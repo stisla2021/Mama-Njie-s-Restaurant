@@ -354,9 +354,10 @@ body {
 }
 
 .reservation-form button {
-        padding: 0.75rem;
-        font-size: 1rem;
-        width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    width: 100%;
+}
 
 /* Contact Section */
 .contact {
