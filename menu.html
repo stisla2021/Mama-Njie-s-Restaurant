@@ -5,9 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Menu - Mama Njie's Restaurant</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+    body {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* FIXED: Blue gradient background like screenshot */
+        color: white; /* FIXED: White text on blue bg */
+        min-height: 100vh;
+    }
+    
+    .menu-item.clickable {
+        cursor: pointer;
+        transition: transform 0.2s;
+        background: rgba(5, 1, 29, 0.95); /* FIXED: White card on blue bg */
+        color: #333; /* FIXED: Dark text on card */
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* FIXED: Stronger shadow */
+    }
+    .menu-item.clickable:hover {
+        transform: scale(1.03);
+        box-shadow: 0 4px 15px rgba(255,165,0,0.3);
+    }
+    .order-btn {
+        display: inline-block;
+        margin-top: 10px;
+        background: #ffb347; /* FIXED: Yellow-orange button like screenshot */
+        color: #1e3c72; /* FIXED: Dark blue text on button */
+        font-weight: bold;
+        padding: 10px;
+        width: 100%;
+        border-radius: 6px;
+        text-align: center;
+        transition: background 0.3s;
+    }
+    .order-btn:hover {
+        background: #ff6b35; /* FIXED: Darker orange on hover */
+        color: white;
+    }
+    .item-header {
+        font-size: 18px;
+        font-weight: bold;
+        color: #1e3c72; /* FIXED: Dark blue dish name */
+        margin: 8px 0;
+    }
+    .price {
+        float: right;
+        color: #ff6b35; /* FIXED: Orange price like screenshot */
+        font-weight: bold;
+    }
+    .menu-item p {
+        color: #555; /* FIXED: Dark gray description */
+        font-size: 14px;
+    }
+    h2 strong {
+        color: #ffb347; /* FIXED: Orange "Our Menu" heading */
+    }
+    .menu-subtitle {
+        color: #e0e0e0; /* FIXED: Light gray subtitle on blue bg */
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">Mama Njie's</div>
@@ -16,128 +76,94 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="menu.html" class="active">Menu</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="reservations.html">Reserve</a></li>
+                <li><a href="reservation.html">Reserve</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Menu Section -->
     <section id="menu" class="menu">
         <div class="container">
             <h2><strong>Our Menu</strong></h2>
-            <p class="menu-subtitle"><i>Traditional Gambian Dishes</i></p>
-            <div class="menu-grid">
-                <div class="menu-column">
-                    <h3><strong>Main Dishes</strong></h3>
-                    <div class="menu-item">
-                        <img src="images/domoda.jpg" alt="Domoda" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Domoda - Image unavailable'">
-                        <div class="item-header">Domoda<span class="price">85 GMD</span></div>
-                        <p>National dish - peanut stew with meat & vegetables</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="images/benachin.jpg" alt="Benachin" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Benachin - Image unavailable'">
-                        <div class="item-header">Benachin<span class="price">95 GMD</span></div>
-                        <p>One-pot rice with fish & fresh vegetables</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="images/yassa.jpg" alt="Yassa" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Yassa - Image unavailable'">
-                        <div class="item-header">Yassa<span class="price">80 GMD</span></div>
-                        <p>Lemon chicken or fish with onions & mustard</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="images/jollof-rice.jpg" alt="Jollof Rice" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Jollof Rice - Image unavailable'">
-                        <div class="item-header">Jollof Rice<span class="price">80 GMD</span></div>
-                        <p>Spiced West African rice with meat</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="images/supakanja.jpg" alt="Supakanja" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Supakanja - Image unavailable'">
-                        <div class="item-header">Supakanja<span class="price">75 GMD</span></div>
-                        <p>Okra stew with palm oil & smoked fish</p>
-                    </div>
-                </div>
-                <div class="menu-column">
-                    <h3><strong>Fish & Seafood</strong></h3>
-                    <div class="menu-item">
-                        <img src="images/mbahal.jpg" alt="Mbahal" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Mbahal - Image unavailable'">
-                        <div class="item-header">Mbahal<span class="price">90 GMD</span></div>
-                        <p>Smoked fish with groundnuts & black-eyed beans</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="images/caldo.jpg" alt="Caldo" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Caldo - Image unavailable'">
-                        <div class="item-header">Caldo<span class="price">88 GMD</span></div>
-                        <p>Lemon-flavored steamed whole fish</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="images/chew-diw.jpg" alt="Chew Diw Tirr" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Chew Diw - Image unavailable'">
-                        <div class="item-header">Chew Diw Tirr<span class="price">92 GMD</span></div>
-                        <p>Smoked catfish with okra & vegetables</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="images/oyster-stew.jpg" alt="Oyster Stew" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Oyster Stew - Image unavailable'">
-                        <div class="item-header">Oyster Stew<span class="price">85 GMD</span></div>
-                        <p>Fresh oysters with peppers & herbs</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="images/peppersoup.jpg" alt="Peppersoup" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Peppersoup - Image unavailable'">
-                        <div class="item-header">Peppersoup<span class="price">65 GMD</span></div>
-                        <p>Spicy fish stew with traditional seasonings</p>
-                    </div>
-                </div>
-                <div class="menu-column">
-                    <h3><strong>Soups & Sides</strong></h3>
-                    <div class="menu-item">
-                        <img src="images/plasas.jpg" alt="Plasas" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Plasas - Image unavailable'">
-                        <div class="item-header">Plasas<span class="price">70 GMD</span></div>
-                        <p>Spinach or potato leaves stew with rice</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="images/okra-soup.jpg" alt="Okra Soup" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Okra Soup - Image unavailable'">
-                        <div class="item-header">Okra Soup<span class="price">60 GMD</span></div>
-                        <p>Traditional okra stew with fresh herbs</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="images/tapalapa.jpg" alt="Tapalapa" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Tapalapa - Image unavailable'">
-                        <div class="item-header">Tapalapa Bread<span class="price">15 GMD</span></div>
-                        <p>Local baguette bread</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="images/attaya.jpg" alt="Attaya" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Attaya - Image unavailable'">
-                        <div class="item-header">Attaya Tea<span class="price">12 GMD</span></div>
-                        <p>Traditional sweet green tea</p>
-                    </div>
-                </div>
-                <div class="menu-column">
-                    <h3>Street Food & Appetizers</h3>
-                    <div class="menu-item">
-                        <img src="images/fishballs.jpg" alt="Fish Balls" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Fish Balls - Image unavailable'">
-                        <div class="item-header">Fish Balls<span class="price">35 GMD</span></div>
-                        <p>Ground fish with spices & rice</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="images/akara.jpg" alt="Akara" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Akara - Image unavailable'">
-                        <div class="item-header">Akara<span class="price">25 GMD</span></div>
-                        <p>Deep-fried black-eyed pea fritters</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="images/moi-moi.jpg" alt="Moi Moi" class="menu-image" onerror="this.style.backgroundColor='#f5d4d4'; this.alt='Moi Moi - Image unavailable'">
-                        <div class="item-header">Moi Moi<span class="price">45 GMD</span></div>
-                        <p>Boiled bean pastry with meat & vegetables</p>
-                    </div>
-                </div>
+            <p class="menu-subtitle"><i>Traditional Gambian Dishes - Click any dish to reserve</i></p>
+
+            <div class="menu-grid" id="menu-grid">
+                <p class="loading-text">Loading menu...</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2026 St_ISLA2021</p>
     </footer>
 
-    <!-- Back to Top Button -->
     <button id="backToTopBtn" class="back-to-top-btn" title="Back to top">
         <strong>↑</strong>
     </button>
 
+    <script>
+    fetch('/api/menu')
+.then(res => res.json())
+.then(dishes => {
+        const grid = document.getElementById('menu-grid');
+        grid.innerHTML = '';
+
+        if (dishes.length === 0) {
+        grid.innerHTML = '<p class="no-dishes-text">No dishes found. Add some in MongoDB Compass!</p>';
+        return;
+        }
+
+        const categories = {};
+        dishes.forEach(dish => {
+        if (!categories[dish.category]) {
+            categories[dish.category] = [];
+        }
+        categories[dish.category].push(dish);
+        });
+
+        for (let cat in categories) {
+            let columnHTML = `<div class="menu-column"><h3><strong>${cat}</strong></h3>`;
+
+        categories[cat].forEach(dish => {
+            columnHTML += `
+            <div class="menu-item clickable" onclick="goToReservation('${dish.name.replace(/'/g, "\\'")}')">
+                <img src="images/${dish.image}" alt="${dish.name}" class="menu-image" onerror="handleImageError(this)">
+                <div class="item-header">${dish.name}<span class="price">${dish.price} GMD</span></div>
+                <p>${dish.description}</p>
+                <span class="order-btn">Reserve This Dish →</span>
+            </div>
+            `;
+        });
+
+        columnHTML += `</div>`;
+        grid.innerHTML += columnHTML;
+        }
+    })
+.catch(err => {
+        document.getElementById('menu-grid').innerHTML = '<p class="error-text">Error loading menu. Make sure server is running: node server.js</p>';
+        console.error(err);
+    });
+
+    function goToReservation(dishName) {
+        window.location.href = 'reservation.html?dish=' + encodeURIComponent(dishName);
+    }
+
+    function handleImageError(img) {
+        img.classList.add('image-error');
+        img.alt = img.alt.replace(' - Image unavailable', '') + ' - Image unavailable';
+    }
+
+    const backBtn = document.getElementById('backToTopBtn');
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            backBtn.style.display = "block";
+        } else {
+            backBtn.style.display = "none";
+        }
+    };
+    backBtn.onclick = function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>
