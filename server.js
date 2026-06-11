@@ -10,10 +10,19 @@ app.use(express.json());
 // Serve static files from current folder
 app.use(express.static(path.join(__dirname)));
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/mama_njies')
-.then(() => console.log('MongoDB connected ✅'))
-.catch(err => console.log('MongoDB error:', err));
+// DEBUG: Check if Render injected MONGO_URI
+console.log('MONGO_URI loaded:', process.env.MONGO_URI ? 'YES' : 'NO - env var missing!');
+
+// Connect to MongoDB - ATLAS + RENDER
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('MongoDB connected ✅ to Atlas'))
+.catch(err => {
+  console.error('MongoDB connection failed:', err.message);
+  process.exit(1); // crash so Render shows error clearly
+});
 
 // Menu Schema
 const menuSchema = new mongoose.Schema({
@@ -25,7 +34,7 @@ const menuSchema = new mongoose.Schema({
 });
 const Menu = mongoose.model('Menu', menuSchema);
 
-// Reservation Schema - FIXED: Added 'notes' field
+// Reservation Schema - includes 'notes' field
 const reservationSchema = new mongoose.Schema({
     name: String,
     email: String,
@@ -34,7 +43,7 @@ const reservationSchema = new mongoose.Schema({
     date: String,
     time: String,
     guests: Number,
-    notes: String, // FIXED: Added this line
+    notes: String,
     createdAt: { type: Date, default: Date.now }
 });
 const Reservation = mongoose.model('Reservation', reservationSchema);
@@ -62,18 +71,19 @@ app.get('/api/menu', async (req, res) => {
     }
 });
 
-// Reservation endpoint - WORKING ✅
+// Reservation endpoint
 app.post('/reserve', async (req, res) => {
     try {
-        console.log('Received reservation:', req.body); // FIXED: Added log for debugging
+        console.log('Received reservation:', req.body);
         const newReservation = new Reservation(req.body);
         await newReservation.save();
         res.json({ success: true, message: 'Reservation saved! We will call you.' });
     } catch (err) {
-        console.error('Save error:', err); // FIXED: Better error logging
+        console.error('Save error:', err);
         res.status(500).json({ success: false, error: err.message });
     }
 });
 
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+// Use Render's port or 5000 locally
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
